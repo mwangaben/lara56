@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "test": "mocha-webpack -w --webpack-config=node_modules/laravel-mix/setup/webpack.config.js --require tests/Vue/setup.js tests/Vue/**.spec.js",
+    "watch_test": "npm run test -- --watch",
+    "mocha": " mocha -r esm --require tests/Vue/setup.js tests/Vue/**/*.spec.js",
+    "jest": "jest",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.24",
+    "axios": "^0.18",
+    "babel-jest": "^23.4.2",
+    "bootstrap": "^4.0.0",
+    "cross-env": "^5.1",
+    "expect": "^23.5.0",
+    "jest": "^23.5.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jquery": "^3.2",
+    "jsdom": "^11.12.0",
+    "jsdom-global": "^3.0.2",
+    "laravel-mix": "^2.0",
+    "lodash": "^4.17.4",
+    "mocha": "^5.2.0",
+    "mocha-webpack": "^1.1.0",
+    "moxios": "^0.4.0",
+    "mwangaben-vthelpers": "^1.2.1",
+    "popper.js": "^1.12",
+    "prettier": "^1.13.7",
+    "vue": "^2.5.7",
+    "vue-jest": "^2.6.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "esm": "^3.0.77"
+  },
+  "name": "lara56",
+  "description": "<p align=\"center\"><img src=\"https://laravel.com/assets/img/components/logo-laravel.svg\"></p>",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC"
+}
