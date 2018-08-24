@@ -11,19 +11,35 @@ describe('Coupon', () => {
     beforeEach(() => {
         wrapper = mount(Coupon);
         b = new Helpers(wrapper, expect);
+
+        wrapper.setData({ coupons : [
+                {
+                    code: "50OFF",
+                    message: "50% OFF",
+                    discount: 50
+                }
+        ] })
     });
 
     it('presents the coupon', () => {
         b.domHas('input[name="coupon"]');
     });
 
-    it('validate the coupon when applied', () => {
+    it('validate a real coupon when applied', () => {
         b.type('50OFF', '#coupon');
 
         b.click('button');
 
         b.see('Coupon applied: 50% OFF');
     });
+
+    it('validates a fake coupon code', () => {
+         b.type('45)FF', '#coupon');
+
+         b.click('button');
+
+         b.see('Invalid coupon')
+     });
 
     it('broadcasts when a coupon is applied', () => {
         b.type('50OFF', '#coupon');

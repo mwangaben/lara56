@@ -4,7 +4,7 @@
         <input type="text" name="coupon" id="coupon" v-model="code">
         <button @click="validate">Submit</button>
 
-        <p v-if="valid">Coupon applied: {{ message }}</p>
+        <p v-text="feedback"></p>
     </div>
 </template>
 
@@ -15,9 +15,9 @@ export default {
             code   : '',
             coupons: [
                 {
-                code    : "50OFF",
-                message : "50% OFF",
-                discount: 50
+                code    : "60OFF",
+                message : "60% OFF",
+                discount: 60
             },
 
             {
@@ -36,6 +36,10 @@ export default {
         return this.selectedCoupon.message
 
         }, 
+
+        feedback() {
+            return this.valid ? `Coupon applied: ${this.message}`: `Invalid coupon`;
+        },
 
         selectedCoupon() {
             return this.coupons.find(coupon => coupon.code == this.code);
