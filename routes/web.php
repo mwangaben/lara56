@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/questions/{number}', function () {
+     return 'Hello';
+});
