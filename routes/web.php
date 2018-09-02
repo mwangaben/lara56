@@ -23,6 +23,10 @@ Route::get('computed', function () {
     return view('vue/computed');
 });
 
+Route::get('components', function () {
+    return view('vue/components/message');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
