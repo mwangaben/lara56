@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::post('/questions/{number}', function () {
      return 'Hello';
 });
+
+Route::get('computed', function () {
+    return view('vue/computed');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
