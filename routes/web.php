@@ -23,8 +23,12 @@ Route::get('computed', function () {
     return view('vue/computed');
 });
 
-Route::get('components', function () {
+Route::get('components/message', function () {
     return view('vue/components/message');
+});
+
+Route::get('components/modal', function () {
+    return view('vue/components/modal');
 });
 
 Auth::routes();
