@@ -5,5 +5,7 @@
     <div class="container">
         
             <computed></computed>
+
+            <tasks></tasks>
     </div>
 @endsection
