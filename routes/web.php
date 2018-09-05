@@ -18,3 +18,23 @@ Route::get('/', function () {
 Route::post('/questions/{number}', function () {
      return 'Hello';
 });
+
+Route::get('computed', function () {
+    return view('vue/computed');
+});
+
+Route::get('components/message', function () {
+    return view('vue/components/message');
+});
+
+Route::get('components/modal', function () {
+    return view('vue/components/modal');
+});
+
+Route::get('components/tabs', function () {
+    return view('vue/components/tabs');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

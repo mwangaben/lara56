@@ -16,6 +16,12 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('Computed', require('./components/ComputedProperties.vue'));
+Vue.component('tasks', require('./components/TasksComponent.vue'));
+Vue.component('message', require('./components/Message.vue'));
+Vue.component('modal', require('./components/Modal.vue'));
+Vue.component('tabs', require('./components/Tabs.vue'));
+Vue.component('tab', require('./components/Tab.vue'));
 
 const app = new Vue({
     el: '#app'
