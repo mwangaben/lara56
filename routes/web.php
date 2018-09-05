@@ -31,6 +31,10 @@ Route::get('components/modal', function () {
     return view('vue/components/modal');
 });
 
+Route::get('components/tabs', function () {
+    return view('vue/components/tabs');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
